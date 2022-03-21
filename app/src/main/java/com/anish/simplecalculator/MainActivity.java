@@ -35,12 +35,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int p,q,r;
-                p = Integer.parseInt(n1.getText().toString());
-                q = Integer.parseInt(n2.getText().toString());
-                r = p+q;
-                tv.setText("Result is " + r);
-                Toast.makeText(MainActivity.this, "Successfully Calculated", Toast.LENGTH_SHORT).show();
+                if(!n1.getText().toString().equals("") && !n2.getText().toString().equals("")) {
+                    p = Integer.parseInt(n1.getText().toString());
+                    q = Integer.parseInt(n2.getText().toString());
+                    r = (p + q);
+                    Toast.makeText(MainActivity.this, "Successfully Calculated", Toast.LENGTH_SHORT).show();
+                    tv.setText("Result is " + r);
+                }else {
+                    Toast.makeText(MainActivity.this, "Error: This field cannot be blank ", Toast.LENGTH_SHORT).show();
 
+                }
             }
         });
 
@@ -50,29 +54,38 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int p,q,r;
-                p = Integer.parseInt(n1.getText().toString());
-                q = Integer.parseInt(n2.getText().toString());
-                r = p-q;
-                tv.setText("Result is " + r);
-                Toast.makeText(MainActivity.this, "Successfully Calculated", Toast.LENGTH_SHORT).show();
+                if(!n1.getText().toString().equals("") && !n2.getText().toString().equals("")) {
+                    p = Integer.parseInt(n1.getText().toString());
+                    q = Integer.parseInt(n2.getText().toString());
+                    r = (p - q);
+                    Toast.makeText(MainActivity.this, "Successfully Calculated", Toast.LENGTH_SHORT).show();
+                    tv.setText("Result is " + r);
+                }else {
+                    Toast.makeText(MainActivity.this, "Error: This field cannot be blank ", Toast.LENGTH_SHORT).show();
 
+                }
             }
         });
 
-        // multiplication part
 
+        // multiplication part
         multi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int p,q,r;
-                p = Integer.parseInt(n1.getText().toString());
-                q = Integer.parseInt(n2.getText().toString());
-                r = p*q;
-                tv.setText("Result is " + r);
-                Toast.makeText(MainActivity.this, "Successfully Calculated", Toast.LENGTH_SHORT).show();
+                if(!n1.getText().toString().equals("") && !n2.getText().toString().equals("")) {
+                    p = Integer.parseInt(n1.getText().toString());
+                    q = Integer.parseInt(n2.getText().toString());
+                    r = (p * q);
+                    Toast.makeText(MainActivity.this, "Successfully Calculated", Toast.LENGTH_SHORT).show();
+                    tv.setText("Result is " + r);
+                }else {
+                    Toast.makeText(MainActivity.this, "Error: This field cannot be blank ", Toast.LENGTH_SHORT).show();
 
+                }
             }
         });
+
 
         //divison part
 
@@ -80,12 +93,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int p,q,r;
-                p = Integer.parseInt(n1.getText().toString());
-                q = Integer.parseInt(n2.getText().toString());
-                r = p/q;
-                tv.setText("Result is " + r);
-                Toast.makeText(MainActivity.this, "Successfully Calculated", Toast.LENGTH_SHORT).show();
+                if(!n1.getText().toString().equals("") && !n2.getText().toString().equals("")) {
+                    p = Integer.parseInt(n1.getText().toString());
+                    q = Integer.parseInt(n2.getText().toString());
+                    r = (p / q);
+                    Toast.makeText(MainActivity.this, "Successfully Calculated", Toast.LENGTH_SHORT).show();
+                    tv.setText("Result is " + r);
+                }else {
+                    Toast.makeText(MainActivity.this, "Error: This field cannot be blank ", Toast.LENGTH_SHORT).show();
 
+                }
             }
         });
 
